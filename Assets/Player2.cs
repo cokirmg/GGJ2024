@@ -35,5 +35,26 @@ public class Player2 : MonoBehaviour
 
 
         transform.position = pos;
+
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            GameManager.Instance.useAbility(0, "Z", 3);
+        }
+        if (Input.GetKey(KeyCode.X))
+        {
+            GameManager.Instance.useAbility(1, "X", 3);
+        }
+        if (Input.GetKey(KeyCode.C))
+        {
+            GameManager.Instance.useAbility(2, "C", 3);
+        }
+        if (Input.GetKey(KeyCode.V))
+        {
+            GameManager.Instance.useAbility(3, "V", 3);
+        }
+
+        
+
     }
 }

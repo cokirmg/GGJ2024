@@ -5,9 +5,29 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
-    public Image ZImage, XImage, CImage, VImage, HImage, JImage, KImage, LImage;
+    private static GameManager _instance;
+    public Image[] uiImage;
     // Start is called before the first frame update
+
+
+
+    public static GameManager Instance
+    {
+        get
+        {
+            if(_instance is null)
+            {
+                Debug.Log("GameManager is null");
+                
+            }
+            return _instance;
+        }
+    }
+
+    private void Awake()
+    {
+        _instance = this;
+    }
     void Start()
     {
         
@@ -19,46 +39,28 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void useAbility(int id)
+    public void useAbility(int id, string key, int cooldown)
     {
-        if (id == 0)
-        {
-            
-        }
-        else if (id == 1)
-        {
-
-        }
-        else if (id == 2)
-        {
-
-        }
-        else if (id == 3)
-        {
-
-        }
-        else if (id == 4)
-        {
-
-        }
-        else if (id == 5)
-        {
-
-        }
-        else if (id == 6)
-        {
-
-        }
-        else if (id == 7)
-        {
-
-        }
-        else if (id == 8)
-        {
-
-        }
+        StartCoroutine(abilitiesCooldown(id, key, cooldown));
 
     }
 
+
+    IEnumerator abilitiesCooldown(int id, string key, int cooldown)
+    {
+
+        uiImage[id].GetComponent<Image>().color = Color.white;
+        for(int i=cooldown; i>0; i--)
+        {
+            uiImage[id].GetComponentInChildren<Text>().text = i.ToString();
+            uiImage[id].GetComponentInChildren<Text>().color = Color.black;
+            yield return new WaitForSeconds(1);
+        }
+        yield return new WaitForSeconds(0.1f);
+        uiImage[id].GetComponent<Image>().color = Color.black;
+        uiImage[id].GetComponentInChildren<Text>().text = key;
+        uiImage[id].GetComponentInChildren<Text>().color = Color.white;
+
+    }
     
 }

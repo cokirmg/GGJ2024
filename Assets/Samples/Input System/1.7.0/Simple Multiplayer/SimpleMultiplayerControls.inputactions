@@ -130,12 +130,12 @@
         },
         {
             "name": "Player2",
-            "id": "06ec7a2a-c803-4605-835e-7ef053fea418",
+            "id": "3f94e50a-588e-449a-ab8f-72b778813afe",
             "actions": [
                 {
                     "name": "Movement",
                     "type": "Value",
-                    "id": "5186c364-d159-4bc0-b31c-97ce1f46732e",
+                    "id": "217623c1-9520-4674-b32c-e289a92570cc",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press",
@@ -145,7 +145,7 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "0928c210-2717-47f8-87db-03aa859f729a",
+                    "id": "fea7e14b-5e35-4482-84fb-dc6dfcbad65a",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -156,7 +156,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "9d536a8a-ad36-4793-b543-7f40ae15bc21",
+                    "id": "64eb095e-1788-4d5e-96bf-fdb64752cebd",
                     "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
@@ -167,7 +167,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "1c8e171a-3f0a-4f25-85e5-0cfbb73852b5",
+                    "id": "7a7b2154-d322-4a40-8673-a1e6d76df571",
                     "path": "<Joystick>/stick/down",
                     "interactions": "",
                     "processors": "",
@@ -178,7 +178,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "7cffde34-0aaa-4953-a004-4bada1153c22",
+                    "id": "8e77e5dd-3723-4977-8e89-82e54e7b6360",
                     "path": "<Joystick>/stick/left",
                     "interactions": "",
                     "processors": "",
@@ -189,7 +189,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "14bb33a5-c180-4cf5-9b49-49872f04edb2",
+                    "id": "1fa8d89f-3fce-4daf-aef0-b270a7998b6e",
                     "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
@@ -199,8 +199,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "WASD",
-                    "id": "59709899-8058-4421-8b81-8397dcbf093f",
+                    "name": "Arrows",
+                    "id": "361ecbea-67c7-4c38-804b-c00c92ad3789",
                     "path": "2DVector",
                     "interactions": "Press",
                     "processors": "",
@@ -211,7 +211,7 @@
                 },
                 {
                     "name": "up",
-                    "id": "f67c5dc1-336b-400e-9bde-5eb62a838e82",
+                    "id": "5c96492f-f499-4b55-8d38-49b1284e0b6b",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
@@ -222,7 +222,7 @@
                 },
                 {
                     "name": "down",
-                    "id": "35e2ce20-7c8f-49dd-8243-297ee4a815ca",
+                    "id": "71b7a731-7ece-4993-824e-82ed094945b0",
                     "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
@@ -233,7 +233,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "c3721383-7474-414c-b54c-722232380a2b",
+                    "id": "35ad25c8-8dbc-40cc-aba9-59427803de8c",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
@@ -244,7 +244,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "3026ddda-9214-4f11-a154-30ec0c854c1e",
+                    "id": "900a9c6e-9c5e-4a81-86bc-bf5ed80e088a",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",

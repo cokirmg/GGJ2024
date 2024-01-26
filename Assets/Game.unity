@@ -125,7 +125,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
   m_PrefabInstance: {fileID: 1202548441}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &312838093
+--- !u!114 &312838102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Joystick
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 960260417}
 --- !u!1 &490736586
@@ -318,6 +318,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4160776069761718008, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5923028803470069687, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
       propertyPath: usageTag
       value: Player2
@@ -330,6 +334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6443449581765581983, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -341,7 +349,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 312838093}
+      addedObject: {fileID: 312838102}
   m_SourcePrefab: {fileID: 100100000, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
 --- !u!1 &1455014446 stripped
 GameObject:
@@ -375,7 +383,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Joystick
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2098537574}
 --- !u!1 &1720148856

@@ -120,6 +120,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &312838086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+  m_PrefabInstance: {fileID: 1202548441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &312838093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312838086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9547001c61582724894ebf550c5b4921, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Joystick
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 960260417}
 --- !u!1 &490736586
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +261,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &960260417 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 665714311667909327, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+  m_PrefabInstance: {fileID: 1202548441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1202548441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -298,8 +338,46 @@ PrefabInstance:
     - {fileID: 4900289326697723705, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 312838093}
   m_SourcePrefab: {fileID: 100100000, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+--- !u!1 &1455014446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+  m_PrefabInstance: {fileID: 2770250045456841691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1455014447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455014446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 9547001c61582724894ebf550c5b4921, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Joystick
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 2098537574}
 --- !u!1 &1720148856
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +578,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!20 &2098537574 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 665714311667909327, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+  m_PrefabInstance: {fileID: 2770250045456841691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2770250045456841691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,7 +642,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6121572142477815012, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1455014447}
   m_SourcePrefab: {fileID: 100100000, guid: f0ac524e66ab6dd46850979fdd23f34f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
-  muerte: {fileID: 0}
+  muerte: {fileID: 1461094781}
 --- !u!1 &452004353
 GameObject:
   m_ObjectHideFlags: 0

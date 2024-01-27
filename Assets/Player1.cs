@@ -82,10 +82,13 @@ public class Player1 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.J))
         {
+
+            this.gameObject.GetComponent<jugador>().empujon();
             GameManager.Instance.useAbility(5, "J", 3);
         }
         if (Input.GetKey(KeyCode.K))
         {
+            this.gameObject.GetComponent<jugador>().caramelos();
             GameManager.Instance.useAbility(6, "K", 3);
         }
         if (Input.GetKey(KeyCode.L))

@@ -1062,6 +1062,9 @@ MonoBehaviour:
   muerte: {fileID: 0}
   enemigos: []
   esteGM: 2
+  puedoEmpujar: 1
+  puedoCaramelo: 1
+  caramelo: {fileID: 8437687869734666229, guid: bd8cb72328d74bf48a3022b4ce635b1c, type: 3}
 --- !u!54 &213495515
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1939,6 +1942,9 @@ MonoBehaviour:
   muerte: {fileID: 0}
   enemigos: []
   esteGM: 1
+  puedoEmpujar: 1
+  puedoCaramelo: 1
+  caramelo: {fileID: 8437687869734666229, guid: bd8cb72328d74bf48a3022b4ce635b1c, type: 3}
 --- !u!1 &595913304
 GameObject:
   m_ObjectHideFlags: 0

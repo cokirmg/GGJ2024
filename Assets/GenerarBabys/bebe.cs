@@ -24,7 +24,7 @@ public class bebe : MonoBehaviour
             esteGM = GameObject.Find("Game Manager2");
         }
         //esteGM = ;
-        target = esteGM.GetComponent<generarbabyboom>().player;
+        irAJugador();
     }
 
     // Update is called once per frame
@@ -34,10 +34,7 @@ public class bebe : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
     }
     
-    public void caramelillo()
-    {
-
-    }
+    
     public void perderVida(int dano)
     {
         vida = vida - dano;
@@ -45,5 +42,9 @@ public class bebe : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    public void irAJugador()
+    {
+        target = esteGM.GetComponent<generarbabyboom>().player;
     }
 }

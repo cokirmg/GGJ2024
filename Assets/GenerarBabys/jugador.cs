@@ -12,8 +12,11 @@ public class jugador : MonoBehaviour
     public int esteGM;
     string enemigo;
 
-    
+    public bool puedoEmpujar = true;
+    public bool puedoCaramelo = true;
 
+    
+    public GameObject caramelo;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +37,13 @@ public class jugador : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.X)) 
         {
-            StartCoroutine(empujeBebe());
+            
+            
 
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            
         }
 
     }
@@ -53,6 +61,7 @@ public class jugador : MonoBehaviour
 
     IEnumerator empujeBebe()
     {
+        puedoEmpujar = false;
 
         enemigos = GameObject.FindGameObjectsWithTag(enemigo);
 
@@ -67,6 +76,8 @@ public class jugador : MonoBehaviour
         {
             enemigos[i].GetComponent<bebe>().speed = -enemigos[i].GetComponent<bebe>().speed;
         }
+        yield return new WaitForSeconds(1.4f);
+        puedoEmpujar = true;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -76,6 +87,38 @@ public class jugador : MonoBehaviour
             
             perderVida(collision.gameObject.GetComponent<bebe>().daño);
             Destroy(collision.gameObject);
+        }
+    }
+    IEnumerator caramelillo()
+    {
+        enemigos = GameObject.FindGameObjectsWithTag(enemigo);
+        puedoCaramelo = false;
+
+        Instantiate(caramelo, transform.position, Quaternion.identity);
+        for (int i = 0; i < enemigos.Length; i++)
+        {
+            enemigos[i].GetComponent<bebe>().target = caramelo;
+        }
+        yield return new WaitForSeconds(3f);
+        for (int i = 0; i < enemigos.Length; i++)
+        {
+            enemigos[i].GetComponent<bebe>().irAJugador();
+        }
+        puedoCaramelo =true;
+    }
+    public void caramelos()
+    {
+        if (puedoCaramelo)
+        {
+            StartCoroutine(caramelillo());
+        }
+    }
+
+    public void empujon()
+    {
+        if (puedoEmpujar)
+        {
+            StartCoroutine(empujeBebe());
         }
     }
 }

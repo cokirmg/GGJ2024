@@ -10,7 +10,7 @@ public class bebe : MonoBehaviour
 
     public GameObject esteGM;
     public int queGM;
-
+    public int vida;
     public int daño = 20;
     // Start is called before the first frame update
     void Start()
@@ -33,14 +33,7 @@ public class bebe : MonoBehaviour
         var step = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, step);
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            target.GetComponent<jugador>().perderVida(daño);
-            Destroy(this.gameObject);
-        }
-    }
+    
     public void caramelillo()
     {
 

@@ -5,6 +5,18 @@ using UnityEngine;
 public class Player1 : MonoBehaviour
 {
     public float speed = 2f;
+
+    public GameObject balaPrefab;
+    public float balaVelocidad;
+    public Vector3 direccionBala;
+
+    public bool puedoDisparo = true;
+
+    public GameObject w;
+    public GameObject a;
+    public GameObject s;
+    public GameObject d;
+    public GameObject direccion;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,18 +52,26 @@ public class Player1 : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            direccion = a;
+            direccionBala = -transform.right;
             pos.x += speed * Time.deltaTime;
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            direccion = d;
+            direccionBala = transform.right;
             pos.x -= speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
+            direccion = w;
+            direccionBala = transform.forward;
             pos.z += speed * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
+            direccion = s;
+            direccionBala = -transform.forward;
             pos.z -= speed * Time.deltaTime;
         }
         transform.position = pos;
@@ -70,8 +90,29 @@ public class Player1 : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.L))
         {
-            GameManager.Instance.useAbility(7, "L", 3);
+            if (puedoDisparo)
+            {
+                GameObject balaTemporal = Instantiate(balaPrefab, direccion.transform.position, Quaternion.identity) as GameObject;
+
+                Rigidbody rb = balaTemporal.GetComponent<Rigidbody>();
+
+                rb.AddForce(direccionBala * balaVelocidad);
+
+                Destroy(balaTemporal, 3f);
+                GameManager.Instance.useAbility(7, "L", 1);
+                StartCoroutine(disparo());
+            }
+            
+
         }
 
     }
+
+    IEnumerator disparo()
+    {
+        puedoDisparo = false;
+        yield return new WaitForSeconds(0.3f);
+        puedoDisparo = true;
+    }
+
 }

@@ -38,4 +38,12 @@ public class bebe : MonoBehaviour
     {
 
     }
+    public void perderVida(int dano)
+    {
+        vida = vida - dano;
+        if(vida <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

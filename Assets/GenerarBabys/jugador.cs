@@ -11,6 +11,9 @@ public class jugador : MonoBehaviour
     public GameObject[] enemigos;
     public int esteGM;
     string enemigo;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +38,6 @@ public class jugador : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            
-
-        }
     }
     
     public void perderVida(int cantidad)
@@ -47,7 +45,7 @@ public class jugador : MonoBehaviour
         vida = vida - cantidad;
         if (vida <= 0)
         {
-            muerte.SetActive(true);
+            //muerte.SetActive(true);
             Destroy(this.gameObject);
             
         }

@@ -41,4 +41,8 @@ public class bebe : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    public void caramelillo()
+    {
+
+    }
 }

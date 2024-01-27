@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 
 public class ManagerCharacter : MonoBehaviour
 {
@@ -19,6 +22,11 @@ public class ManagerCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Game");
+        }
         if (Input.GetKey(KeyCode.A))
         {
             if (cd2)
@@ -122,7 +130,7 @@ public class ManagerCharacter : MonoBehaviour
         cd = true;
         arrows[3].GetComponent<Image>().color = Color.red;
         character2.GetComponent<CharacterSelect>().NextCharacter1();
-        PlayerPrefs.SetInt("Character2", character1.GetComponent<CharacterSelect>().index);
+        PlayerPrefs.SetInt("Character2", character2.GetComponent<CharacterSelect>().index);
         yield return new WaitForSeconds(0.5f);
         arrows[3].GetComponent<Image>().color = Color.white;
         cd = false;
@@ -132,7 +140,7 @@ public class ManagerCharacter : MonoBehaviour
         cd = true;
         arrows[2].GetComponent<Image>().color = Color.red;
         character2.GetComponent<CharacterSelect>().PreviousCharacter1();
-        PlayerPrefs.SetInt("Character2", character1.GetComponent<CharacterSelect>().index);
+        PlayerPrefs.SetInt("Character2", character2.GetComponent<CharacterSelect>().index);
         yield return new WaitForSeconds(0.5f);
         arrows[2].GetComponent<Image>().color = Color.white;
         cd = false;

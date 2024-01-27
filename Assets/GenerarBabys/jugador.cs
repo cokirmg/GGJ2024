@@ -15,7 +15,7 @@ public class jugador : MonoBehaviour
     public bool puedoEmpujar = true;
     public bool puedoCaramelo = true;
 
-    
+    public GameObject areaCosquillas;
     public GameObject caramelo;
     // Start is called before the first frame update
     void Start()
@@ -35,15 +35,9 @@ public class jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X)) 
+        if(Input.GetKey(KeyCode.J))
         {
-            
-            
-
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            
+            cosquillas();
         }
 
     }
@@ -121,5 +115,16 @@ public class jugador : MonoBehaviour
         {
             StartCoroutine(empujeBebe());
         }
+    }
+
+    public void cosquillas()
+    {
+        StartCoroutine(puedoCosquillas());
+    }
+    IEnumerator puedoCosquillas()
+    {
+        areaCosquillas.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        areaCosquillas.SetActive(false);
     }
 }

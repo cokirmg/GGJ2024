@@ -78,6 +78,7 @@ public class Player1 : MonoBehaviour
 
         if (Input.GetKey(KeyCode.H))
         {
+
             GameManager.Instance.useAbility(4, "H", 3);
         }
         if (Input.GetKey(KeyCode.J))

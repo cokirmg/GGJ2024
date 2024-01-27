@@ -20,8 +20,10 @@ public class caramelo : MonoBehaviour
     {
         if(collision.gameObject.tag == "enemigo" || collision.gameObject.tag == "enemigo1")
         {
+
+
             Destroy(collision.gameObject);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 

@@ -94,7 +94,7 @@ public class jugador : MonoBehaviour
         enemigos = GameObject.FindGameObjectsWithTag(enemigo);
         puedoCaramelo = false;
 
-        Instantiate(caramelo, transform.position, Quaternion.identity);
+        GameObject esteCaramelo = Instantiate(caramelo, transform.position, Quaternion.identity);
         for (int i = 0; i < enemigos.Length; i++)
         {
             enemigos[i].GetComponent<bebe>().target = caramelo;
@@ -104,6 +104,7 @@ public class jugador : MonoBehaviour
         {
             enemigos[i].GetComponent<bebe>().irAJugador();
         }
+        Destroy(esteCaramelo);
         puedoCaramelo =true;
     }
     public void caramelos()

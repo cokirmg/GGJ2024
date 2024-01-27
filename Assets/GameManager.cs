@@ -49,17 +49,17 @@ public class GameManager : MonoBehaviour
     IEnumerator abilitiesCooldown(int id, string key, int cooldown)
     {
 
-        uiImage[id].GetComponent<Image>().color = Color.white;
+        uiImage[id].GetComponent<Image>().color = Color.black;
         for(int i=cooldown; i>0; i--)
         {
             uiImage[id].GetComponentInChildren<Text>().text = i.ToString();
-            uiImage[id].GetComponentInChildren<Text>().color = Color.black;
+            uiImage[id].GetComponentInChildren<Text>().color = Color.white;
             yield return new WaitForSeconds(1);
         }
         yield return new WaitForSeconds(0.1f);
-        uiImage[id].GetComponent<Image>().color = Color.black;
-        uiImage[id].GetComponentInChildren<Text>().text = key;
-        uiImage[id].GetComponentInChildren<Text>().color = Color.white;
+        uiImage[id].GetComponent<Image>().color = Color.white;
+        uiImage[id].GetComponentInChildren<Text>().text = "";
+        
 
     }
     

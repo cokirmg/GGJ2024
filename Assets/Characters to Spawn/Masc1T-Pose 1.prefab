@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2016516368092701895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6371753
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4311235
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.6588979
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.096943706
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9952899
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -191.126
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 321053733762881476, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b9302387987b11d42a1a928d5c3d1415, type: 2}
+    - target: {fileID: 919132149155446097, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_Name
+      value: Masc1T-Pose 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 32ac9c9676232a346ac64a0bdf438d95, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3437662120303327168}
+  m_SourcePrefab: {fileID: 100100000, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+--- !u!1 &1674621226584119702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: addf74f8961a1dc40a1084a4df064e8e, type: 3}
+  m_PrefabInstance: {fileID: 2016516368092701895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3437662120303327168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674621226584119702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a4e62a9a79d9c4db9c7b855d4f81b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  balaPrefab: {fileID: 0}
+  balaVelocidad: 0
+  direccionBala: {x: 0, y: 0, z: 0}
+  puedoDisparo: 1
+  w: {fileID: 0}
+  a: {fileID: 0}
+  s: {fileID: 0}
+  d: {fileID: 0}
+  direccion: {fileID: 0}

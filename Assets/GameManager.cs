@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     public Image[] uiImage;
+    public int idchico, idchica;
+    public GameObject[] chica, chico;
     // Start is called before the first frame update
 
 
@@ -30,7 +32,31 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        
+        idchico = PlayerPrefs.GetInt("Character1");
+        idchica = PlayerPrefs.GetInt("Character2");
+        for(int i=0; i<chica.Length; i++)
+        {
+            if (i == idchica)
+            {
+                chica[i].SetActive(true);
+            }
+            else
+            {
+                chica[i].SetActive(false);
+            }
+        }
+        for (int x = 0; x < chico.Length; x++)
+        {
+            if (x == idchico)
+            {
+                chico[x].SetActive(true);
+            }
+            else
+            {
+                chico[x].SetActive(false);
+            }
+        }
+
     }
 
     // Update is called once per frame

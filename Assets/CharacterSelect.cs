@@ -10,6 +10,7 @@ public class CharacterSelect : MonoBehaviour
 
     public int index = 0;
     public GameObject[] characters;
+    public float turn;
     
     // Start is called before the first frame update
     void Start()

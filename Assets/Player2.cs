@@ -11,12 +11,14 @@ public class Player2 : MonoBehaviour
     public Vector3 direccionBala;
 
     public bool puedoDisparo = true;
-
+    
     public GameObject w;
     public GameObject a;
     public GameObject s;
     public GameObject d;
     public GameObject direccion;
+    public Animator anim;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class Player2 : MonoBehaviour
             direccion = w;
             direccionBala = transform.forward;
             pos.z += speed * Time.deltaTime;
+            
         }
         if (Input.GetKey("s"))
         {

@@ -11,16 +11,19 @@ public class Player1 : MonoBehaviour
     public Vector3 direccionBala;
 
     public bool puedoDisparo = true;
-
+    public int id;
+    public Animator anim;
+    public Animator[] animArray;
     public GameObject w;
     public GameObject a;
     public GameObject s;
     public GameObject d;
     public GameObject direccion;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = animArray[id];
     }
 
     // Update is called once per frame
@@ -32,18 +35,22 @@ public class Player1 : MonoBehaviour
         if (x > 0)
         {
             pos.x += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         else if(x<0)
         {
             pos.x -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         if (z > 0)
         {
             pos.z += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         else if (z < 0)
         {
             pos.z -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
 
 
@@ -55,24 +62,28 @@ public class Player1 : MonoBehaviour
             direccion = a;
             direccionBala = -transform.right;
             pos.x += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             direccion = d;
             direccionBala = transform.right;
             pos.x -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
             direccion = w;
             direccionBala = transform.forward;
             pos.z += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             direccion = s;
             direccionBala = -transform.forward;
             pos.z -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
         }
         transform.position = pos;
 

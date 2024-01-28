@@ -3591,6 +3591,11 @@ MonoBehaviour:
   balaVelocidad: 700
   direccionBala: {x: 0, y: 0, z: 0}
   puedoDisparo: 1
+  id: 0
+  anim: {fileID: 1080273155}
+  animArray:
+  - {fileID: 2061309108}
+  - {fileID: 1080273155}
   w: {fileID: 719960028}
   a: {fileID: 595913304}
   s: {fileID: 880436121}
@@ -6547,6 +6552,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5545410354850833067, guid: 050d1465fe1ba104680bdaf476eed4de, type: 3}
   m_PrefabInstance: {fileID: 1080273152}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1080273155 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1251645752282030699, guid: 050d1465fe1ba104680bdaf476eed4de, type: 3}
+  m_PrefabInstance: {fileID: 1080273152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083650124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: be0e23453c6ea6c48ae30a6e49c503c2, type: 3}
@@ -7459,6 +7469,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc5d9e0e148aee4aa2ddc6fbcd282b3, type: 3}
+--- !u!95 &1265735274 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5421571235591991155, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
+  m_PrefabInstance: {fileID: 1409481536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1282779790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8580,6 +8595,10 @@ PrefabInstance:
       propertyPath: w
       value: 
       objectReference: {fileID: 675846078}
+    - target: {fileID: 8439654408368449363, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1265735274}
     - target: {fileID: 8439654408368449363, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
       propertyPath: speed
       value: 6
@@ -9800,6 +9819,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1872031131}
     - target: {fileID: 8439654408368449363, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1555453373}
+    - target: {fileID: 8439654408368449363, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
@@ -9846,6 +9869,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1086963857}
   m_SourcePrefab: {fileID: 100100000, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
+--- !u!95 &1555453373 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5421571235591991155, guid: 7d860725bafd0fb4ea20d13b22768ab5, type: 3}
+  m_PrefabInstance: {fileID: 1555453372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1557416013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12680,6 +12708,11 @@ Transform:
 --- !u!1 &2061309107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1674621226584119702, guid: c10dca5df7af2ca4998041775c02174b, type: 3}
+  m_PrefabInstance: {fileID: 2061309105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2061309108 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5374640822294518102, guid: c10dca5df7af2ca4998041775c02174b, type: 3}
   m_PrefabInstance: {fileID: 2061309105}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2066822960

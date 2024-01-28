@@ -34,11 +34,13 @@ public class GameManager : MonoBehaviour
     {
         idchico = PlayerPrefs.GetInt("Character1");
         idchica = PlayerPrefs.GetInt("Character2");
+        
         for(int i=0; i<chica.Length; i++)
         {
             if (i == idchica)
             {
                 chica[i].SetActive(true);
+                
             }
             else
             {
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
             if (x == idchico)
             {
                 chico[x].SetActive(true);
+                chico[x].GetComponent<Player1>().id = idchico;
             }
             else
             {

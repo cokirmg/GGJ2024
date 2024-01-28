@@ -30,7 +30,6 @@ public class Player1 : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
-        
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         if (x > 0)
@@ -53,11 +52,6 @@ public class Player1 : MonoBehaviour
             pos.z -= speed * Time.deltaTime;
             anim.SetTrigger("Move");
         }
-        if (x == 0 && z==0)
-        {
-            anim.SetTrigger("Idle");
-
-        }
 
 
         
@@ -69,25 +63,13 @@ public class Player1 : MonoBehaviour
             direccionBala = -transform.right;
             pos.x += speed * Time.deltaTime;
             anim.SetTrigger("Move");
-
         }
-        else if (Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-            
-            anim.SetTrigger("Idle");
-        }
-
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             direccion = d;
             direccionBala = transform.right;
             pos.x -= speed * Time.deltaTime;
             anim.SetTrigger("Move");
-        }
-        else if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-
-            anim.SetTrigger("Idle");
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
@@ -96,11 +78,6 @@ public class Player1 : MonoBehaviour
             pos.z += speed * Time.deltaTime;
             anim.SetTrigger("Move");
         }
-        else if (Input.GetKeyUp(KeyCode.UpArrow))
-        {
-
-            anim.SetTrigger("Idle");
-        }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             direccion = s;
@@ -108,34 +85,25 @@ public class Player1 : MonoBehaviour
             pos.z -= speed * Time.deltaTime;
             anim.SetTrigger("Move");
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
-        {
-
-            anim.SetTrigger("Idle");
-        }
         transform.position = pos;
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKey(KeyCode.H))
         {
 
             GameManager.Instance.useAbility(4, "H", 3);
-            anim.SetTrigger("A2");
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKey(KeyCode.J))
         {
 
             this.gameObject.GetComponent<jugador>().empujon();
             GameManager.Instance.useAbility(5, "J", 3);
-            anim.SetTrigger("A3");
         }
-        
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKey(KeyCode.K))
         {
             this.gameObject.GetComponent<jugador>().caramelos();
             GameManager.Instance.useAbility(6, "K", 3);
-            anim.SetTrigger("A4");
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.L))
         {
             if (puedoDisparo)
             {
@@ -147,7 +115,6 @@ public class Player1 : MonoBehaviour
 
                 Destroy(balaTemporal, 3f);
                 GameManager.Instance.useAbility(7, "L", 1);
-                anim.SetTrigger("A1");
                 StartCoroutine(disparo());
             }
             

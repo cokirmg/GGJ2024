@@ -18,11 +18,13 @@ public class Player2 : MonoBehaviour
     public GameObject d;
     public GameObject direccion;
     public Animator anim;
-    
+    public Animator[] animArray;
+    public int id;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = animArray[id];
     }
 
     // Update is called once per frame
@@ -30,24 +32,87 @@ public class Player2 : MonoBehaviour
     {
         Vector3 pos = transform.position;
 
+
+
+        float x = Input.GetAxis("EjeX");
+        float z = Input.GetAxis("EjeZ");
+        if (x > 0)
+        {
+            direccion = d;
+            direccionBala = transform.right;
+            pos.x += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        else if (x < 0)
+        {
+            direccion = a;
+            direccionBala = -transform.right;
+            pos.x -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        if (z > 0)
+        {
+            direccion = w;
+            direccionBala = transform.forward;
+            pos.z += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        else if (z < 0)
+        {
+            direccion = w;
+            direccionBala = transform.forward;
+            direccion = s;
+            direccionBala = -transform.forward;
+            pos.z -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        if (x == 0 && z == 0)
+        {
+            anim.SetTrigger("Idle");
+
+        }
+
+
+        /*
         if (Input.GetKey("w"))
         {
             direccion = w;
             direccionBala = transform.forward;
             pos.z += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+
+        }
+        else if (Input.GetKeyUp("w"))
+        {
             
+            anim.SetTrigger("Idle");
+
         }
         if (Input.GetKey("s"))
         {
             direccion = s;
             direccionBala = -transform.forward;
             pos.z -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        else if (Input.GetKeyUp("s"))
+        {
+
+            anim.SetTrigger("Idle");
+
         }
         if (Input.GetKey("d"))
         {
             direccion = d;
             direccionBala = transform.right;
             pos.x += speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        else if (Input.GetKeyUp("d"))
+        {
+
+            anim.SetTrigger("Idle");
+
         }
         if (Input.GetKey("a"))
         {
@@ -55,8 +120,17 @@ public class Player2 : MonoBehaviour
             direccion = a;
             direccionBala = -transform.right;
             pos.x -= speed * Time.deltaTime;
+            anim.SetTrigger("Move");
+        }
+        else if (Input.GetKeyUp("a"))
+        {
+
+            anim.SetTrigger("Idle");
+
         }
 
+
+        */
 
         transform.position = pos;
 
@@ -73,6 +147,7 @@ public class Player2 : MonoBehaviour
 
                 Destroy(balaTemporal, 3f);
                 GameManager.Instance.useAbility(0, "Z", 1);
+                anim.SetTrigger("A1");
                 StartCoroutine(disparo());
             }
             
@@ -85,15 +160,18 @@ public class Player2 : MonoBehaviour
         {
             this.gameObject.GetComponent<jugador>().caramelos();
             GameManager.Instance.useAbility(1, "X", 3);
+            anim.SetTrigger("A2");
         }
         if (Input.GetKey(KeyCode.C))
         {
             this.gameObject.GetComponent<jugador>().empujon();
             GameManager.Instance.useAbility(2, "C", 3);
+            anim.SetTrigger("A3");
         }
         if (Input.GetKey(KeyCode.V))
         {
             GameManager.Instance.useAbility(3, "V", 3);
+            anim.SetTrigger("A4");
         }
 
         
